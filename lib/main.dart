@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,11 +15,12 @@ class Music extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Center(
-            child: Text(
-              'haydar',
-              style: TextStyle(
-                fontSize: 40,
-              ),
+            child: TextButton(
+              onPressed: () {
+                final player = AudioCache();
+                player.play('note3.wav');
+              },
+              child: Text('note1.wav'),
             ),
           ),
         ),
